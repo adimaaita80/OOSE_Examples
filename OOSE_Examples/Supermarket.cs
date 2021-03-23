@@ -16,7 +16,7 @@ namespace OOSE_Examples
 
         public string SupermarketInformation()
         {
-            return $"Supermarket name: {SupermarketName} \n Supermarket address: {SupermarketAddress}";
+            return $"Supermarket name: {SupermarketName} \n Supermarket address: {SupermarketAddress} \n Supermarket phone: {SupermarketPhone}";
         }
     }
 }
