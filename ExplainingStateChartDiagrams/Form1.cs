@@ -31,5 +31,10 @@ namespace ExplainingStateChartDiagrams
             textBox3.Text = operatingSystemProcess.ProcessMemory.ToString();
             textBox4.Text = operatingSystemProcess.ProcessState.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,10 +32,14 @@ namespace ExplainingStateChartDiagrams
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtHours = new System.Windows.Forms.TextBox();
+            this.txtMinutes = new System.Windows.Forms.TextBox();
+            this.txtSeconds = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.buttons1and2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -46,6 +50,7 @@ namespace ExplainingStateChartDiagrams
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -55,27 +60,31 @@ namespace ExplainingStateChartDiagrams
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // txtHours
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtHours.Enabled = false;
+            this.txtHours.Location = new System.Drawing.Point(78, 48);
+            this.txtHours.Name = "txtHours";
+            this.txtHours.Size = new System.Drawing.Size(100, 20);
+            this.txtHours.TabIndex = 2;
             // 
-            // textBox2
+            // txtMinutes
             // 
-            this.textBox2.Location = new System.Drawing.Point(184, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtMinutes.Enabled = false;
+            this.txtMinutes.Location = new System.Drawing.Point(184, 48);
+            this.txtMinutes.Name = "txtMinutes";
+            this.txtMinutes.Size = new System.Drawing.Size(100, 20);
+            this.txtMinutes.TabIndex = 3;
             // 
-            // textBox3
+            // txtSeconds
             // 
-            this.textBox3.Location = new System.Drawing.Point(290, 48);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.txtSeconds.Enabled = false;
+            this.txtSeconds.Location = new System.Drawing.Point(290, 48);
+            this.txtSeconds.Name = "txtSeconds";
+            this.txtSeconds.Size = new System.Drawing.Size(100, 20);
+            this.txtSeconds.TabIndex = 4;
             // 
             // timer1
             // 
@@ -83,14 +92,55 @@ namespace ExplainingStateChartDiagrams
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // buttons1and2
+            // 
+            this.buttons1and2.Location = new System.Drawing.Point(153, 237);
+            this.buttons1and2.Name = "buttons1and2";
+            this.buttons1and2.Size = new System.Drawing.Size(131, 49);
+            this.buttons1and2.TabIndex = 5;
+            this.buttons1and2.Text = "Button1 + 2";
+            this.buttons1and2.UseVisualStyleBackColor = true;
+            this.buttons1and2.Click += new System.EventHandler(this.buttons1and2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(78, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Hours";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(190, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Minutes";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(300, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Seconds";
+            // 
             // TwoButtonWatchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 314);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttons1and2);
+            this.Controls.Add(this.txtSeconds);
+            this.Controls.Add(this.txtMinutes);
+            this.Controls.Add(this.txtHours);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "TwoButtonWatchForm";
@@ -105,9 +155,13 @@ namespace ExplainingStateChartDiagrams
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtHours;
+        private System.Windows.Forms.TextBox txtMinutes;
+        private System.Windows.Forms.TextBox txtSeconds;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button buttons1and2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
