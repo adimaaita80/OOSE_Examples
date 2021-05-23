@@ -1,0 +1,12 @@
+Mapping classes to code:
+
+Case 1: Mapping a single class
+
+Case 2: Mapping 2 classes with an association relationship
+Case 2a: Mapping a 1-1 association
+Case 2:b Mapping a 1-* association
+case 3:c Mapping a *-* association
+
+Case 3: Mapping 2 classes with a aggregation relationship
+
+Case 4: Mapping 2 classes with a generalization relationship

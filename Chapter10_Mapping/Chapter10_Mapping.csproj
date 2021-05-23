@@ -53,5 +53,8 @@
     <None Include="App.config" />
     <None Include="OOSE_Car_Mapping_Example.mdj" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="OOSE_Lecture30_Notes.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
