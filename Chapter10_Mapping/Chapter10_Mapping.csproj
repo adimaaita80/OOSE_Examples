@@ -48,6 +48,9 @@
     <Compile Include="Owner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs" />
+    <Compile Include="UniversityCourse.cs" />
+    <Compile Include="UniversityStudent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
